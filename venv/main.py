@@ -11,12 +11,11 @@ with col2:
     st.title('Alan Shen')
     content = """ Hi, I am Alan! I'm a Python Programmer, Personal Trainer, I graduated from University of Surrey having studied Sport & Exercise Science,
     I have worked for various companies in the UK within the Fitness Industry, as a Personal Trainer, Health Advisor and Manager. 
-    However I have found my passion in programming and python. 
-    I aim to keep learning and best myself in programming skills,
-    and also making world class web and graphic interface applications.
+    However I have found my passion in python programming. 
+    I aim to keep learning and best myself in programming skills, also making world class web and graphic interface applications.
     """
     st.info(content)
 
-st.write("Below you can find some of the apps I have built in Python."
-             " Feel free to contact me!")
+content = """Below you can find some of the apps I have built in Python. Feel free to contact me!"""
+st.write(content)
 
