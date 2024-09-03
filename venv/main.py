@@ -1,8 +1,9 @@
 import streamlit as st
+import pandas
 
 st.set_page_config(layout = 'wide')
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns(2) # create two columns to store in 2 objects
 
 with col1:
     st.image("venv/image/photo.jpg")
@@ -19,3 +20,17 @@ with col2:
 content = """Below you can find some of the apps I have built in Python. Feel free to contact me!"""
 st.write(content)
 
+col3, col4 = st.columns(2)
+
+df = pandas.read_csv('venv/data.csv', sep = ';') # this reads the CSV as a strcutred file and seperate them with ;
+
+with col3:
+    for index, row in df[:10].iterrows(): # with [:10] we split the rows and columns
+        # ``iterrows`` returns a Series for each row,
+        st.header(row["title"])
+    # this created a header to write big text, write will do too
+    # but header write H1 header
+
+with col4:# with [10:] we split the rows and columns
+    for index,row in df[10:].iterrows():
+        st.header(row['title'])
